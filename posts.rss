@@ -15,8 +15,8 @@ comment: For micro.blog only.
         <title></title>
         <description>{{ post.content | markdownify | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url }}</link>
-        <guid isPermaLink="true">{{ post.url }}</guid>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
       </item>
     {% endfor %}
   </channel>
