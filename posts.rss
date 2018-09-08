@@ -6,13 +6,13 @@ comment: For micro.blog only.
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ site.title }} notes</title>
-    <description>notes</description>
+    <description>posts</description>
     <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/notes.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ site.url }}/posts.rss" rel="self" type="application/rss+xml" />
     <lastBuildDate>{{ site.posts.first.date | date_to_rfc822 }}</lastBuildDate>
     {% for post in site.posts limit: 10 %}
       <item>
-        <title></title>
+        <title>{{ post.title }}</title>
         <description>{{ post.content | markdownify | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ site.url }}{{ post.url }}</link>
