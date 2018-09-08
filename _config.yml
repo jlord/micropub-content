@@ -1,4 +1,6 @@
 permalink: /posts/:title
+title: jlord's micro blog
+url: https://jlord.us/micropub-content
 kramdown:
   hard_wrap: true
 timezone: GMT
